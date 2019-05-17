@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import cn.wj.study.R
 
@@ -28,9 +29,19 @@ class NormalActivity : AppCompatActivity() {
         Log.e("--Study--" + this.localClassName, "onCreate")
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        Log.e("--Study--" + this.localClassName, "onRestart")
+    }
+
     override fun onStart() {
         super.onStart()
         Log.e("--Study--" + this.localClassName, "onStart")
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.e("--Study--" + this.localClassName, "onRestoreInstanceState")
     }
 
     override fun onResume() {
@@ -38,9 +49,19 @@ class NormalActivity : AppCompatActivity() {
         Log.e("--Study--" + this.localClassName, "onResume")
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        Log.e("--Study--" + this.localClassName, "onCreateOptionsMenu")
+        return super.onCreateOptionsMenu(menu)
+    }
+
     override fun onPause() {
         super.onPause()
         Log.e("--Study--" + this.localClassName, "onPause")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.e("--Study--" + this.localClassName, "onSaveInstanceState")
     }
 
     override fun onStop() {
