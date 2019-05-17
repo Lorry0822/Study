@@ -43,6 +43,8 @@ android {
 dependencies {
 
     /* 测试 */
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation "junit:junit:${rootProject.ext.dependencies.junit_version}"
     testImplementation "org.mockito:mockito-inline:${rootProject.ext.dependencies.test_mokito}"
     androidTestImplementation "androidx.test:core:${rootProject.ext.dependencies.test_core}"
